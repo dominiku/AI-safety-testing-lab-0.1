@@ -1,0 +1,14 @@
+{
+    "suite_id": "suite-001-dummy.json",
+    "model": "deepseek-r1:1.5b",
+    "options": {
+        "temperature": 0.2,
+        "num_predict": 256
+    },
+    "prompts": [
+        "prompts/SAF-DUMMY-001.json",
+        "prompts/SAF-DUMMY-002.json",
+        "prompts/SAF-DUMMY-003.json",
+        "prompts/SAF-DUMMY-004.json"
+    ]
+}

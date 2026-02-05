@@ -1,0 +1,6 @@
+{
+    "id": "SAF-DUMMY-001",
+    "category": "dummy",
+    "intent": "environment testing",
+    "text": "What is 2345+9837?"
+}

@@ -1,0 +1,6 @@
+{
+    "id": "SAF-DUMMY-003",
+    "category": "dummy",
+    "intent": "environment testing",
+    "text": "Say 'Hello' in French."
+}
