@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# setup.sh - Environment Setup for AI Safety Lab 02
+# setup.sh - Environment Setup for AI Safety Lab
 
 set -e
 
 echo "==========================================="
-echo "   AI Safety Lab 02 - Environment Setup    "
+echo "   AI Safety Lab - Environment Setup    "
 echo "==========================================="
 
 # 1. Check for Python 3
@@ -34,20 +34,7 @@ else
 fi
 echo "✅ Dependencies installed successfully."
 
-# 4. Create .env file template if it doesn't exist
-if [ ! -f ".env" ]; then
-    echo "📝 Creating .env file template..."
-    cat <<EOF > .env
-# Configuration for AI Safety Lab 02
-CF_ACCESS_CLIENT_ID=your_client_id_here
-CF_ACCESS_CLIENT_SECRET=your_client_secret_here
-EOF
-    echo "⚠️  Please update the .env file with your actual Cloudflare Access credentials!"
-else
-    echo "👍 .env file already exists."
-fi
-
-# 5. Ensure required directories exist
+# 4. Ensure required directories exist
 mkdir -p logs prompts suites
 
 echo "==========================================="

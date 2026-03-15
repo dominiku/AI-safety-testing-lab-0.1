@@ -9,9 +9,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-CF_ID = os.getenv('CF_ACCESS_CLIENT_ID')
-CF_SECRET = os.getenv('CF_ACCESS_CLIENT_SECRET')
-
 OLLAMA_URL = "https://ollama.domhome.priv.pl/api/generate"
 
 # Model switcher
@@ -40,9 +37,11 @@ def run_prompt(prompt: Prompt):
  
     headers = {}
 
-    if CF_ID and CF_SECRET:
-        headers["CF-Access-Client-Id"] = CF_ID
-        headers["CF-Access-Client-Secret"] = CF_SECRET
+    try:
+        from local_settings import HEADERS
+        headers.update(HEADERS)
+    except ImportError:
+        pass
 
     r = requests.post(OLLAMA_URL, json=payload, headers=headers, timeout=(10, 300))
     r.raise_for_status()

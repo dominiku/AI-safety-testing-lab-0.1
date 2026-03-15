@@ -1,26 +1,27 @@
-# AI Safety Lab 02
+# AI Safety Lab
 
-A minimal, Python-based safety testing environment for evaluating LLM responses. This framework runs predefined suites of test prompts against an Ollama backend or other LLM and securely logs the completions.
+A minimal, Python-based safety testing environment for evaluating LLM responses. This framework runs predefined suites of test prompts against an Ollama backend or after small adjustment other LLM frameworks.
+
+This project is a part of my learning path, don't expect bells and whistles here.
+
+It's work in progress and it might become fairly usable tool at some point. For now, no roadmap, just experiments.
 
 ## Prerequisites
 
 - Python 3.10+
 - An Ollama instance (running locally or remotely)
-- Cloudflare Access Credentials (if Ollama is behind a CF tunnel)
 
 ## Getting Started
 
 ### 1. Automatic Setup
 
-We have provided a setup script to quickly assemble the environment, install the virtual env, and set up your `.env` file from a template. 
+I have provided a setup script to quickly assemble the environment, install the virtual env, and set up your `.env` file from a template. 
 
 Run the following command:
 
 ```bash
 bash setup.sh
 ```
-
-Follow the prompts to add your `CF_ACCESS_CLIENT_ID` and `CF_ACCESS_CLIENT_SECRET` (if applicable) to the generated `.env` file.
 
 ### 2. Manual Setup
 
@@ -38,13 +39,6 @@ If you prefer to configure the environment manually:
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
-   ```
-
-4. **Set up environment variables:**
-   Create a `.env` file in the root directory and add the following values:
-   ```ini
-   CF_ACCESS_CLIENT_ID=your_client_id_here
-   CF_ACCESS_CLIENT_SECRET=your_client_secret_here
    ```
 
 ## Running the Tests
