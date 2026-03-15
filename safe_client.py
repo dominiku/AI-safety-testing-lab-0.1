@@ -16,9 +16,9 @@ OLLAMA_URL = "https://ollama.domhome.priv.pl/api/generate"
 
 # Model switcher
 # MODEL = "tinyllama:latest"
-MODEL = "kimi-k2:1t-cloud"
+# MODEL = "kimi-k2:1t-cloud"
 # MODEL = "qwen:1.8b"
-# MODEL = "qwen:0.5b"
+MODEL = "qwen:0.5b"
 # MODEL = "olmo-3:7b-think"
 # MODEL = "deepseek-r1:1.5b"
 

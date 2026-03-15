@@ -2,8 +2,7 @@
 import json
 from datetime import datetime
 from pathlib import Path
-# from safe_client import run_prompt
-
+from safe_client import run_prompt, Prompt
 def main():
     # 1. SETUP
     suite = json.load(open("suites/suite-001-dummy.json"))
@@ -19,7 +18,8 @@ def main():
         case = json.load(open(prompt_file))
         
         try:
-            response = run_prompt(case["text"])
+            prompt = Prompt(**case)
+            response = run_prompt(prompt)
             result = {"id": case["id"], "status": "ok", "response": response}
         except Exception as e:
             result = {"id": case["id"], "status": "error", "error": str(e)}
