@@ -1,6 +1,6 @@
 # AI Safety Lab
 
-A minimal, Python-based safety testing environment for evaluating LLM responses. This framework runs predefined suites of test prompts against an Ollama backend or after small adjustment other LLM frameworks.
+A minimal, Python-based safety testing environment for evaluating LLM responses. This tiny framework runs predefined suites of test prompts against an Ollama backend or after small adjustment other LLM frameworks.
 
 This project is a part of my learning path, don't expect bells and whistles here.
 
